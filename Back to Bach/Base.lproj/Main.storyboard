@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_to_Bach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEt-Kf-Tm2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SvT-FD-gPK"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Back To Bach" id="agl-nf-1tm">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="wRa-O7-pez">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="FKM-La-kWc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-m7-YMs">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nPj-wF-KKE"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="pTc-FZ-Uhg">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="mee-uG-LZG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1TY-CI-C16"/>
+                                    <barButtonItem title="Stop" id="od6-Gj-czB">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="cIo-y8-W7x"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mozart.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jfv-61-vaK">
+                                <rect key="frame" x="217" y="153" width="166" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="53q-pw-aZc"/>
+                                    <constraint firstAttribute="height" constant="214" id="PMG-3h-Srp"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-Z8-2lw">
+                                <rect key="frame" x="215" y="403" width="170" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AXZ-Kv-KJC"/>
+                                    <constraint firstAttribute="width" constant="166" id="O6F-QT-Mzc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="QTd-Dj-Wkg"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-1M-imv">
+                                <rect key="frame" x="215" y="448" width="170" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NTW-Od-APB"/>
+                                    <constraint firstAttribute="width" constant="166" id="bOi-Wo-bAC"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7E6-1M-imv" firstAttribute="top" secondItem="kSa-Z8-2lw" secondAttribute="bottom" constant="15" id="JZb-1l-d8U"/>
+                            <constraint firstItem="KYw-m7-YMs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NGV-vb-hyS"/>
+                            <constraint firstItem="fEt-Kf-Tm2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NnG-vc-QEf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KYw-m7-YMs" secondAttribute="trailing" constant="-20" id="PQk-nY-DRP"/>
+                            <constraint firstItem="jfv-61-vaK" firstAttribute="top" secondItem="fEt-Kf-Tm2" secondAttribute="bottom" constant="89" id="aaJ-fr-Ii3"/>
+                            <constraint firstItem="jfv-61-vaK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4f-00-IFJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fEt-Kf-Tm2" secondAttribute="trailing" constant="-20" id="l4P-g2-J5L"/>
+                            <constraint firstItem="fEt-Kf-Tm2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v5t-0h-dvV"/>
+                            <constraint firstItem="7E6-1M-imv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vdk-zb-7XZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KYw-m7-YMs" secondAttribute="bottom" id="w8D-I8-SQm"/>
+                            <constraint firstItem="kSa-Z8-2lw" firstAttribute="top" secondItem="jfv-61-vaK" secondAttribute="bottom" constant="36" id="xFM-rj-JLg"/>
+                            <constraint firstItem="kSa-Z8-2lw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yg6-1g-9NB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="volumeSlider" destination="kSa-Z8-2lw" id="m3S-nv-pnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mozart.jpg" width="250" height="324"/>
+    </resources>
+</document>
